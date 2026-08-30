@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 03 - JavaScript Program Basics</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f7fb; color: #1f2937; margin: 0; padding: 32px; }
+    main { max-width: 820px; margin: auto; background: white; padding: 30px 38px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,.10); }
+    h1 { color: #173f6b; margin-top: 0; }
+    h2 { color: #275d8c; border-bottom: 2px solid #dbe7f3; padding-bottom: 6px; margin-top: 28px; }
+    p { margin: 6px 0; line-height: 1.45; }
+    .output { background: #f8fafc; border-left: 4px solid #3b82b6; padding: 12px 16px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JavaScript Loops and Arrays</h1>
 
+    <h2>Odd and Even Numbers: For Loop</h2>
+    <div id="forLoopOutput" class="output"></div>
+
+    <h2>Counting to Your Number: Do While Loop</h2>
+    <div id="doWhileOutput" class="output"></div>
+
+    <h2>Subjects: forEach()</h2>
+    <div id="subjectOutput" class="output"></div>
+
+    <h2>Subjects Separated by Commas</h2>
+    <p id="commaOutput" class="output"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+
+// Use a for loop to count from 0 through 10 and identify odd/even values.
+const forLoopOutput = document.getElementById("forLoopOutput");
+
+for (let count = 0; count <= 10; count++) {
+  const result = count % 2 === 0 ? "even" : "odd";
+  forLoopOutput.innerHTML += `<p>Count ${count} is ${result}</p>`;
+}
+
+// Ask for a number from 5 through 20 and continue until valid input is given.
+let myNum;
+
+do {
+  myNum = Number(prompt("Enter a number between 5 and 20:"));
+} while (!Number.isInteger(myNum) || myNum < 5 || myNum > 20);
+
+// Use a do while loop that begins at 1 and stops at myNum.
+const doWhileOutput = document.getElementById("doWhileOutput");
+let loopCounter = 1;
+
+do {
+  doWhileOutput.innerHTML += `<p>Loop counter: ${loopCounter}</p>`;
+  loopCounter++;
+} while (loopCounter <= myNum);
+
+// Store the required subjects in an array.
+const subjects = [
+  "Accounting",
+  "Algebra",
+  "Programming",
+  "Art",
+  "Data Analytics"
+];
+
+// Display each array item in a readable format with forEach().
+const subjectOutput = document.getElementById("subjectOutput");
+subjects.forEach(function (subject) {
+  subjectOutput.innerHTML += `<p>${subject}</p>`;
+});
+
+// Display all array items separated by commas using one statement.
+document.getElementById("commaOutput").textContent = subjects.join(", ");
