@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Bryce's JavaScript Webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 04 - Tip Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef3f8;
+      color: #1f2937;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: auto;
+      background: #ffffff;
+      padding: 36px;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      color: #174a72;
+      margin-top: 0;
+    }
+
+    .result {
+      background: #f7fafc;
+      border-left: 5px solid #2f80a9;
+      padding: 18px;
+      line-height: 1.6;
+      border-radius: 4px;
+    }
+
+    .error {
+      border-left-color: #b42318;
+      background: #fff4f2;
+      color: #8a1c13;
+    }
+  </style>
 </head>
-
 <body>
+  <main>
+    <h1>Service Tip Calculator</h1>
+    <p id="output" class="result">Your recommended tip will appear here.</p>
+  </main>
 
-    <h1>My First JavaScript Webpage</h1>
-
-    <p>Welcome to my first webpage using JavaScript!</p>
-
-    <script>
-        console.log("Hello from my JavaScript console!");
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
