@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 06 - Dog Object Constructor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 36px 20px;
+            font-family: Arial, sans-serif;
+            color: #17324d;
+            background: #eef3f8;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 34px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(23, 50, 77, 0.12);
+        }
+        h1, h2 { color: #0f4c75; }
+        h1 { margin-top: 0; }
+        .dog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+        }
+        .dog-card, .selection-card {
+            padding: 18px 22px;
+            border-left: 5px solid #2f80b7;
+            border-radius: 6px;
+            background: #f6f9fc;
+        }
+        .dog-card h2 { margin-top: 0; font-size: 1.2rem; }
+        .dog-card p { margin: 8px 0; }
+        .selection-card { margin-top: 24px; }
+        .selection-card h2 { margin-top: 0; }
+        .error { color: #a22121; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Fictional Dog Constructor Objects</h1>
+        <p>The following dogs were created with the same constructor function.</p>
+        <div id="dog-list" class="dog-grid"></div>
+        <section class="selection-card">
+            <h2>Selected Dog</h2>
+            <p id="selected-output"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
